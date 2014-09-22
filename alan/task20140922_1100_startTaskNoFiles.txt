@@ -1,0 +1,13 @@
+    1  sudo apt-get install task
+    2  echo see if I can delete data and restart
+    3  ls ~/.task
+    4  echo can see existing data
+    5  ls -al ~/.task
+    6  echo files are empty
+    7  rm ~/.task/*
+    8  ls -al ~/.task
+    9  echo there are no task files now
+   10  echo what happens if I start task?
+   11  task
+   12  ls -al ~/.task
+   13  echo it has created the files again and says "No Matches"

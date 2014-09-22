@@ -1,0 +1,20 @@
+    1  2014-09-22 11:20:33    sudo apt-get install task
+    2  2014-09-22 11:20:49    echo created a new terminal to run task in after staring multitail
+    3  2014-09-22 11:21:07    echo try a simple set of commands and see if they appear in multitail
+    4  2014-09-22 11:21:33    task add read the taskwarrior documentation
+    5  2014-09-22 11:21:50    task
+    6  2014-09-22 11:22:18    task delete 1
+    7  2014-09-22 11:22:42    task
+    8  2014-09-22 11:23:00    echo now that I have deleted that task, what happens if I create a dupe?
+    9  2014-09-22 11:23:05    task add read the taskwarrior documentation
+   10  2014-09-22 11:23:22    echo both tasks are shown in the pending.data, but one has a status of deleted
+   11  2014-09-22 11:23:54    echo multitail seems useful for small files - might be harder when files get bigger - good to start with though
+   12  2014-09-22 11:42:01    echo try some of the commands from the 30 second tutorial
+   13  2014-09-22 11:42:05    task next
+   14  2014-09-22 11:43:08    echo create a task and mark it as done
+   15  2014-09-22 11:43:28    task add priority:H experiment with 30 second tutorial
+   16  2014-09-22 11:43:30    task
+   17  2014-09-22 11:43:32    task next
+   18  2014-09-22 11:44:40    task 2 done
+   19  2014-09-22 11:45:28    task
+   20  2014-09-22 11:46:50    export HISTTIMEFORMAT='%F %T    '; history > ~/Dropbox/shared/task20140922_1145_30secondTutorial.txt

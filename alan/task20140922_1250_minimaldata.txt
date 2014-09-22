@@ -1,0 +1,86 @@
+    1  2014-09-22 11:20:33    sudo apt-get install task
+    2  2014-09-22 11:20:49    echo created a new terminal to run task in after staring multitail
+    3  2014-09-22 11:21:07    echo try a simple set of commands and see if they appear in multitail
+    4  2014-09-22 11:21:33    task add read the taskwarrior documentation
+    5  2014-09-22 11:21:50    task
+    6  2014-09-22 11:22:18    task delete 1
+    7  2014-09-22 11:22:42    task
+    8  2014-09-22 11:23:00    echo now that I have deleted that task, what happens if I create a dupe?
+    9  2014-09-22 11:23:05    task add read the taskwarrior documentation
+   10  2014-09-22 11:23:22    echo both tasks are shown in the pending.data, but one has a status of deleted
+   11  2014-09-22 11:23:54    echo multitail seems useful for small files - might be harder when files get bigger - good to start with though
+   12  2014-09-22 11:42:01    echo try some of the commands from the 30 second tutorial
+   13  2014-09-22 11:42:05    task next
+   14  2014-09-22 11:43:08    echo create a task and mark it as done
+   15  2014-09-22 11:43:28    task add priority:H experiment with 30 second tutorial
+   16  2014-09-22 11:43:30    task
+   17  2014-09-22 11:43:32    task next
+   18  2014-09-22 11:44:40    task 2 done
+   19  2014-09-22 11:45:28    task
+   20  2014-09-22 11:46:50    export HISTTIMEFORMAT='%F %T    '; history > ~/Dropbox/shared/task20140922_1145_30secondTutorial.txt
+   21  2014-09-22 12:17:51    echo experiment with minimal data
+   22  2014-09-22 12:17:57    task app bob
+   23  2014-09-22 12:18:07    task help
+   24  2014-09-22 12:19:26    task app bob
+   25  2014-09-22 12:23:19    task
+   26  2014-09-22 12:24:48    echo the 'append' gave me the option of appending to 3 tasks, but I only have 1 task active, and I have 1 delted and one done
+   27  2014-09-22 12:25:02    echo did not expect to be able to amend a deleted or done task
+   28  2014-09-22 12:26:04    echo see if app was append with a zzz command
+   29  2014-09-22 12:26:07    task zzz bob
+   30  2014-09-22 12:27:02    echo No Matches, so app is a command that means append
+   31  2014-09-22 12:27:29    task help | grep app
+   32  2014-09-22 12:28:11    echo 'append' is listed in the help file, but 'app' is not, does this mean that all commands can be truncated? or that aliases exist?
+   33  2014-09-22 12:29:23    task add
+   34  2014-09-22 12:29:55    echo can't add a task without a description
+
+'
+   35  2014-09-22 12:30:23    echo what about spaces?
+   36  2014-09-22 12:30:31    task add       
+   37  2014-09-22 12:30:43    echo that was 7 spaces after add, and it was not accepted
+   38  2014-09-22 12:30:50    task add '       '
+   39  2014-09-22 12:30:59    echo can't put in quotes either
+'
+   40  2014-09-22 12:31:20    task add %20%20
+   41  2014-09-22 12:31:24    task
+   42  2014-09-22 12:31:57    echo OK, url encoding, long shot 
+   43  2014-09-22 12:33:14    echo command truncation on 'done'
+   44  2014-09-22 12:33:19    task
+   45  2014-09-22 12:33:28    task 2 doned
+   46  2014-09-22 12:33:42    echo no matches
+   47  2014-09-22 12:33:44    task
+   48  2014-09-22 12:33:49    task 2 don
+   49  2014-09-22 12:34:08    echo can complete task on don as well as done
+   50  2014-09-22 12:35:43    task undo
+   51  2014-09-22 12:36:10    task
+   52  2014-09-22 12:36:38    task 2 do
+   53  2014-09-22 12:36:52    task undo
+   54  2014-09-22 12:37:28    echo does d equal done?
+   55  2014-09-22 12:37:33    task 2 d
+   56  2014-09-22 12:37:55    echo no matches, might mean that task has to be 2 chars
+   57  2014-09-22 12:38:25    task 2 ap bob
+   58  2014-09-22 12:38:28    task
+   59  2014-09-22 12:38:33    task 2 a bob
+   60  2014-09-22 12:38:45    echo seems like a command needs to be 2 chars
+   61  2014-09-22 12:38:56    task 2 modify modified task
+   62  2014-09-22 12:39:13    echo can modify task descriptions with modify command
+   63  2014-09-22 12:40:19    task 2 modify
+   64  2014-09-22 12:40:27    task 2 modify ''
+   65  2014-09-22 12:40:30    task 2 modify ' '
+   66  2014-09-22 12:40:35    task 2 modify      
+   67  2014-09-22 12:41:29    echo 'cannot modify without any text
+'
+   68  2014-09-22 12:42:16    task modify all same name
+   69  2014-09-22 12:43:33    echo repeat a command done done
+   70  2014-09-22 12:43:46    task
+   71  2014-09-22 12:43:51    task 2 done done
+   72  2014-09-22 12:43:58    task
+   73  2014-09-22 12:47:08    echo 'what happens if id does not exist?'
+   74  2014-09-22 12:47:10    task
+   75  2014-09-22 12:47:15    task 2 done
+   76  2014-09-22 12:47:22    echo 'No tasks specified.'
+   77  2014-09-22 12:47:49    echo and if a priority does not exist
+   78  2014-09-22 12:47:57    task add priority:Z this is priority z
+   79  2014-09-22 12:48:10    echo Priority values may be 'H', 'M' or 'L', not 'Z'.
+   80  2014-09-22 12:48:38    task add piority:H this is piority z
+   81  2014-09-22 12:48:59    echo created task with piority H
+   82  2014-09-22 12:49:00    task

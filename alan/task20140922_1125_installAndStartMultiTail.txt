@@ -1,0 +1,10 @@
+    1  2014-09-22 11:13:42    cd ~/.task
+    2  2014-09-22 11:13:46    ls -al
+    3  2014-09-22 11:14:07    export HISTTIMEFORMAT='%F %T    '
+    4  2014-09-22 11:15:08    echo experiment with monitoring the task files
+    5  2014-09-22 11:16:11    sudo apt-get install multitail
+    6  2014-09-22 11:17:11    multitail -Q ~/.task/*
+    7  2014-09-22 11:17:31    multitail -Q ~/.task/*.data
+    8  2014-09-22 11:18:02    man multitail 
+    9  2014-09-22 11:19:22    echo man file says that -Q needs an interval - this is not shown on the example on the website
+   10  2014-09-22 11:20:21    multitail -Q 1 ~/.task/*
